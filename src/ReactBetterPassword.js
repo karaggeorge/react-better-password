@@ -33,7 +33,10 @@ class ReactBetterPassword extends Component {
 
     this.timer = setTimeout(() => {
       this.saveCursorPosition();
-      this.setState({ maskedValue: value.split('').map(() => mask).join('') }, this.resetCursorPosition);
+      this.setState(
+        { maskedValue: value.split('').map(() => mask).join('') },
+        this.resetCursorPosition
+      );
     }, timeout);
     return value.split('').map((char, index) => index !== lastIndex ? mask : char).join('');
   }
@@ -44,9 +47,10 @@ class ReactBetterPassword extends Component {
 
   resetCursorPosition() {
     const cursorPostion = this.cursor;
+    const input = this.refs.input;
 
-    this.refs.input.selectionStart = cursorPostion;
-    this.refs.input.selectionEnd = cursorPostion;
+    input.selectionStart = cursorPostion;
+    input.selectionEnd = cursorPostion;
   }
 
   onChange(ev) {

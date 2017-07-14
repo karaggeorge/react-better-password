@@ -1,6 +1,6 @@
 {
   "name": "react-better-password",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React Better Password",
   "main": "lib/ReactBetterPassword.js",
   "author": "George Karagkiaouris",

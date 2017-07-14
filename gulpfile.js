@@ -1,5 +1,5 @@
-var gulp = require('gulp');
-var initGulpTasks = require('react-component-gulp-tasks');
+import gulp from 'gulp';
+import initGulpTasks from 'react-component-gulp-tasks';
 
 /**
  * Tasks are added by the react-component-gulp-tasks package
@@ -10,32 +10,32 @@ var initGulpTasks = require('react-component-gulp-tasks');
  * You can also add your own additional gulp tasks if you like.
  */
 
-var taskConfig = {
+const taskConfig = {
 
-	component: {
-		name: 'ReactBetterPassword',
-		dependencies: [
-			'classnames',
-			'react',
-			'react-dom'
-		],
-		lib: 'lib'
-	},
+  component: {
+    name: 'ReactBetterPassword',
+    dependencies: [
+      'classnames',
+      'react',
+      'react-dom'
+    ],
+    lib: 'lib'
+  },
 
-	example: {
-		src: 'example/src',
-		dist: 'example/dist',
-		files: [
-			'index.html',
-			'.gitignore'
-		],
-		scripts: [
-			'example.js'
-		],
-		less: [
-			'example.less'
-		]
-	}
+  example: {
+    src: 'example/src',
+    dist: 'example/dist',
+    files: [
+      'index.html',
+      '.gitignore'
+    ],
+    scripts: [
+      'example.js'
+    ],
+    less: [
+      'example.less'
+    ]
+  }
 
 };
 

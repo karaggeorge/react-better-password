@@ -1,0 +1,29 @@
+{
+  "name": "react-better-password",
+  "version": "0.0.0",
+  "description": "React Better Password",
+  "main": "dist/react-better-password.min.js",
+  "homepage": "https://github.com/karaggeorge/react-better-password",
+  "authors": [
+    "George Karagkiaouris"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "react",
+    "react-component"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".editorconfig",
+    ".gitignore",
+    "package.json",
+    "src",
+    "node_modules",
+    "example",
+    "test"
+  ]
+}

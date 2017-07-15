@@ -1,3 +1,8 @@
+env:
+  global:
+    - CC_TEST_REPORTER_ID=d9227154c5ab5a4d3aab39d2871d62bbf7583798e80f39e9445b2cc7a94fc67a
+    - GIT_COMMITTED_AT=$(if [ "$TRAVIS_PULL_REQUEST" == "false" ]; then git log -1 --pretty=format:%ct; else git log -1 --skip 1 --pretty=format:%ct; fi)
+
 language: node_js
 node_js:
   - "7"
@@ -8,7 +13,10 @@ cache:
 
 install: npm install
 
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+
 script:
   - npm run test:coverage
-  - echo $CODECLIMATE_TOKEN
-  - codecov --token=$CODECLIMATE_TOKEN
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT

@@ -8,4 +8,7 @@ cache:
 
 install: npm install
 
-script: npm run test:coverage
+script:
+  - npm run test:coverage
+  - echo $CODECLIMATE_TOKEN
+  - codecov --token=$CODECLIMATE_TOKEN

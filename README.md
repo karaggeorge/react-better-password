@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/karaggeorge/react-better-password.svg?branch=master)](https://travis-ci.org/karaggeorge/react-better-password)
+[![Code Climate](https://codeclimate.com/github/karaggeorge/react-better-password/badges/gpa.svg)](https://codeclimate.com/github/karaggeorge/react-better-password)
+[![Test Coverage](https://codeclimate.com/github/karaggeorge/react-better-password/badges/coverage.svg)](https://codeclimate.com/github/karaggeorge/react-better-password/coverage)
+[![Issue Count](https://codeclimate.com/github/karaggeorge/react-better-password/badges/issue_count.svg)](https://codeclimate.com/github/karaggeorge/react-better-password)
+
 # React Better Password
 
 __COMPONENT DESCRIPTION GOES HERE__
@@ -58,4 +63,3 @@ To build, watch and serve the examples (which will also watch the component sour
 __PUT LICENSE HERE__
 
 Copyright (c) 2017 George Karagkiaouris.
-

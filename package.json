@@ -17,7 +17,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",
-    "babel-eslint": "^4.1.3",
     "babel-loader": "^6.2.5",
     "babel-plugin-istanbul": "^2.0.2",
     "babel-polyfill": "^6.16.0",
@@ -25,6 +24,8 @@
     "babel-preset-react": "^6.16.0",
     "babel-preset-stage-2": "^6.17.0",
     "babel-register": "^6.16.3",
+    "babel-eslint": "^4.1.3",
+    "codecov": "^2.2.0",
     "eslint": "^3.7.1",
     "eslint-plugin-import": "^2.6.0",
     "eslint-plugin-react": "^6.3.0",
@@ -49,10 +50,19 @@
     "release": "NODE_ENV=production gulp release",
     "start": "gulp dev",
     "test": "jest",
+    "test:coverage": "jest --coverage && codecov",
     "watch": "gulp watch:lib"
   },
   "keywords": [
     "react",
     "react-component"
-  ]
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/*.js"
+    ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  }
 }

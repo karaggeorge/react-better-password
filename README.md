@@ -1,7 +1,8 @@
 [![Build Status](https://travis-ci.org/karaggeorge/react-better-password.svg?branch=master)](https://travis-ci.org/karaggeorge/react-better-password)
 [![Code Climate](https://codeclimate.com/github/karaggeorge/react-better-password/badges/gpa.svg)](https://codeclimate.com/github/karaggeorge/react-better-password)
-[![codecov](https://codecov.io/gh/karaggeorge/react-better-password/branch/master/graph/badge.svg)](https://codecov.io/gh/karaggeorge/react-better-password)
+[![Test Coverage](https://codeclimate.com/github/karaggeorge/react-better-password/badges/coverage.svg)](https://codeclimate.com/github/karaggeorge/react-better-password/coverage)
 [![Issue Count](https://codeclimate.com/github/karaggeorge/react-better-password/badges/issue_count.svg)](https://codeclimate.com/github/karaggeorge/react-better-password)
+[![codecov](https://codecov.io/gh/karaggeorge/react-better-password/branch/master/graph/badge.svg)](https://codecov.io/gh/karaggeorge/react-better-password)
 
 # React Better Password
 

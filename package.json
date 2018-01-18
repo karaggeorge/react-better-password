@@ -1,10 +1,10 @@
 {
   "name": "react-better-password",
-  "version": "0.0.3",
-  "description": "React Better Password",
-  "main": "lib/ReactBetterPassword.js",
+  "version": "0.1.0",
+  "description": "Password input for ReactJS that mimics mobile password masking behavior. Delays the masking of the last character to improve user accuracy.",
+  "main": "build/index.js",
   "author": "George Karagkiaouris",
-  "homepage": "https://github.com/karaggeorge/react-better-password",
+  "homepage": "https://karaggeorge.github.io/react-better-password",
   "repository": {
     "type": "git",
     "url": "https://github.com/karaggeorge/react-better-password.git"
@@ -12,57 +12,41 @@
   "bugs": {
     "url": "https://github.com/karaggeorge/react-better-password/issues"
   },
-  "dependencies": {
-    "classnames": "^2.1.2"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.16.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-istanbul": "^2.0.2",
-    "babel-polyfill": "^6.16.0",
-    "babel-preset-es2015": "^6.16.0",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-2": "^6.17.0",
-    "babel-register": "^6.16.3",
-    "babel-eslint": "^4.1.3",
-    "codecov": "^2.2.0",
-    "eslint": "^3.7.1",
-    "eslint-plugin-import": "^2.6.0",
-    "eslint-plugin-react": "^6.3.0",
-    "estraverse-fb": "^1.3.2",
-    "gulp": "^3.9.0",
-    "jest": "^20.0.4",
-    "react": "^0.14.0",
-    "react-component-gulp-tasks": "^0.7.6",
-    "react-dom": "^0.14.0"
-  },
   "peerDependencies": {
-    "react": "^0.14.0"
-  },
-  "browserify-shim": {
-    "react": "global:React"
-  },
-  "scripts": {
-    "build": "gulp clean && NODE_ENV=production gulp build",
-    "examples": "gulp dev:server",
-    "lint": "eslint ./; true",
-    "publish:site": "NODE_ENV=production gulp publish:examples",
-    "release": "NODE_ENV=production gulp release",
-    "start": "gulp dev",
-    "test": "jest",
-    "test:coverage": "jest --coverage && codecov",
-    "watch": "gulp watch:lib"
+    "react": "^16.2.0"
   },
   "keywords": [
-    "react",
-    "react-component"
-  ],
-  "jest": {
-    "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "src/*.js"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+   "react",
+   "react-component",
+   "password",
+   "mask",
+   "mobile",
+   "timeout",
+   "last",
+   "character"
+ ],
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
+  },
+  "scripts": {
+    "start-example": "cd example && yarn start",
+    "start-component": "webpack --watch",
+    "start": "npm-run-all -p start-component start-example",
+    "build": "webpack",
+    "build-example": "cd example && yarn build",
+    "publish-gh-pages": "gh-pages -d example/build",
+    "publish-example": "npm-run-all build-example publish-gh-pages"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "npm-run-all": "^4.1.2",
+    "webpack": "^2.6.1"
   }
 }
